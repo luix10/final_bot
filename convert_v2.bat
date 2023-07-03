@@ -1,0 +1,1 @@
+start cmd /k "venv\scripts\activate.bat && python convert_v2.py"

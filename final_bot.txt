@@ -1,0 +1,26 @@
+python
+	carrega o json diretamente da api da operadora (Binance ou HitBTC)
+	salva para arquivo
+	backtest
+		aplica a análise técnica adicionando os indicadores aos candles
+		implementar a estratégia para sinalizar se o candle é ponto de compra/venda baseado nas regras de indicadores e nos stop_loss de compras abertas
+		gravar as informações de compra/venda para um arquivo separado
+			adicionar motivo da compra/venda
+
+html / javascript
+	carrega arquivo
+	exibe gráfico candlestick padrão
+		utilizar visualização de indicadores técnicos do próprio gráfico
+	adicionar ao gráfico anotações de compra/venda do arquivo de backtest
+
+#------------------------------------------------
+pip install TA-Lib
+
+import talib
+print("TA-Lib Version : {}".format(talib.__version__))
+
+apple_df["SMA"] = talib.SMA(apple_df.Close, timeperiod=3)
+apple_df["RSI"] = talib.RSI(apple_df.Close, timeperiod=3)
+apple_df["EMA"] = talib.EMA(apple_df.Close, timeperiod=3)
+
+https://coderzcolumn.com/tutorials/data-science/candlestick-chart-in-python-mplfinance-plotly-bokeh#1

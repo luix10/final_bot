@@ -1,0 +1,1 @@
+start cmd /k "venv\scripts\activate.bat && python final_bot.py"
